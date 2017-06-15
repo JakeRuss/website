@@ -4,9 +4,74 @@ slug: "stargazer"
 date: "2014-09-03"
 excerpt: "Exploring stargazer with dplyr and nycflights13"
 tags: [rstats, stargazer, cheatsheet]
+output:
+  blogdown::html_page:
+    toc: true
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#last-updated-june-15-2017">Last updated: June 15, 2017</a></li>
+<li><a href="#dataset-dplyr-and-nycflights13">Dataset: dplyr and nycflights13</a></li>
+<li><a href="#quick-notes">Quick notes</a><ul>
+<li><a href="#html-formatting">HTML formatting</a></li>
+</ul></li>
+<li><a href="#the-default-summary-statistics-table">The default summary statistics table</a><ul>
+<li><a href="#remove-row-and-column-names">Remove row and column names</a></li>
+<li><a href="#change-which-statistics-are-displayed">Change which statistics are displayed</a></li>
+<li><a href="#change-which-statistics-are-displayed-a-second-way">Change which statistics are displayed (a second way)</a></li>
+<li><a href="#remove-logical-variables-in-the-summary-statistics">Remove logical variables in the summary statistics</a></li>
+<li><a href="#flip-the-table-axes">Flip the table axes</a></li>
+</ul></li>
+<li><a href="#the-default-regression-table">The default regression table</a></li>
+<li><a href="#change-the-style">Change the style</a></li>
+<li><a href="#labelling-the-table">Labelling the table</a><ul>
+<li><a href="#add-a-title-change-the-variable-labels">Add a title; change the variable labels</a></li>
+<li><a href="#exclude-the-dependent-variable-label-or-the-model-numbers">Exclude the dependent variable label or the model numbers</a></li>
+<li><a href="#change-the-column-names">Change the column names</a></li>
+<li><a href="#apply-a-label-to-more-than-one-column">Apply a label to more than one column</a></li>
+<li><a href="#model-names">Model names</a></li>
+<li><a href="#model-names-again">Model names (again)</a></li>
+<li><a href="#add-a-custom-row-to-the-reported-statistics">Add a custom row to the reported statistics</a></li>
+<li><a href="#include-r-object-names">Include R object names</a></li>
+</ul></li>
+<li><a href="#change-the-default-output">Change the default output</a><ul>
+<li><a href="#report-t-statistics-or-p-values-instead-of-standard-errors">Report t-statistics or p-values instead of standard errors</a></li>
+<li><a href="#report-confidence-intervals">Report confidence intervals</a></li>
+<li><a href="#adjust-the-confidence-intervals">Adjust the confidence intervals</a></li>
+<li><a href="#robust-standard-errors-replicating-statas-robust-option">Robust standard errors (replicating Stata’s robust option)</a></li>
+<li><a href="#move-the-intercept-term-to-the-top-of-the-table">Move the intercept term to the top of the table</a></li>
+<li><a href="#compress-the-table-output">Compress the table output</a></li>
+</ul></li>
+<li><a href="#omit-parts-of-the-default-output">Omit parts of the default output</a><ul>
+<li><a href="#reporting-omitted-variables">Reporting omitted variables</a></li>
+<li><a href="#omit-summary-statistics">Omit summary statistics</a></li>
+<li><a href="#omit-whole-parts-of-the-table">Omit whole parts of the table</a></li>
+<li><a href="#omit-whole-parts-of-the-table-a-second-way">Omit whole parts of the table (a second way)</a></li>
+<li><a href="#omit-the-degrees-of-freedom">Omit the degrees of freedom</a></li>
+</ul></li>
+<li><a href="#statistical-significance-options">Statistical significance options</a><ul>
+<li><a href="#change-the-cutoffs-for-significance">Change the cutoffs for significance</a></li>
+</ul></li>
+<li><a href="#modifying-table-notes">Modifying table notes</a><ul>
+<li><a href="#make-an-addition-to-the-existing-note-section">Make an addition to the existing note section</a></li>
+<li><a href="#replace-the-note-section">Replace the note section</a></li>
+<li><a href="#change-note-alignment">Change note alignment</a></li>
+<li><a href="#change-the-note-section-label">Change the note section label</a></li>
+</ul></li>
+<li><a href="#table-aesthetics">Table aesthetics</a><ul>
+<li><a href="#use-html-tags-to-modify-table-elements">Use html tags to modify table elements</a></li>
+<li><a href="#change-decimal-character">Change decimal character</a></li>
+<li><a href="#control-the-number-of-decimal-places">Control the number of decimal places</a></li>
+<li><a href="#additional-decimal-controls">Additional decimal controls</a></li>
+<li><a href="#drop-leading-zeros-from-decimals">Drop leading zeros from decimals</a></li>
+<li><a href="#change-the-order-of-the-variables">Change the order of the variables</a></li>
+<li><a href="#select-which-variables-to-keep-in-the-table">Select which variables to keep in the table</a></li>
+</ul></li>
+<li><a href="#feedback">Feedback</a></li>
+</ul>
+</div>
 
 <div id="last-updated-june-15-2017" class="section level3">
 <h3>Last updated: June 15, 2017</h3>

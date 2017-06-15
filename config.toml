@@ -1,44 +1,60 @@
-baseurl = "https://example.com/"
+baseurl = "https://www.jakeruss.com/"
 languageCode = "en-US"
-title = "Chris Turner"
+title = "Jake Russ"
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "jake_russ"
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
+googleAnalytics = "UA-44185619-1"
 theme = "hugo-sustain"
 
 [permalinks]
-  post = "/:year/:month/:day/:slug"
+  blog = "/blog/:slug/"
+  cheatsheets = "cheatsheets/:slug/"
 
 [params]
-  avatar = "profile.png"
-  author = "Chris Turner"
-  description = "Describe your website"
+  avatar = "18.5.jpg"
+  author = "Jake Russ"
+  description = "economist and statistical programmer"
 
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
   custom_js  = []
 
 [params.social]
-  Github        = "username"
-  Email         = "email@example.com"
-  Twitter       = "username"
-  LinkedIn      = "username"
-  Stackoverflow = "username"
+  Github        = "jakeruss"
+  Email         = "jake.w.russ@gmail.com"
+  Twitter       = "jakeruss"
+  LinkedIn      = "jakeruss"
+  Stackoverflow = "users/2878990/jake-russ"
 
 ## Main Menu
 [[menu.main]]
-  name = "blog"
-  weight = 100
+  name       = "about"
+  identifier = "about"
+  weight     = 100
+  url        = "/about/"
+[[menu.main]]
+  name       = "blog"
   identifier = "blog"
-  url = "/blog/"
+  weight     = 200
+  url        = "/blog/"
 [[menu.main]]
-  name = "projects"
-  identifier = "projects"
-  weight = 200
-  url = "/projects/"
+  name       = "cheatsheets"
+  identifier = "cheatsheets"
+  weight     = 300
+  url        = "/cheatsheets/"
 [[menu.main]]
-  name = "resume"
+  name       = "papers"
+  identifier = "papers"
+  weight     = 400
+  url        = "/papers/"
+[[menu.main]]
+  name       = "resume"
   identifier = "resume"
-  weight = 300
-  url = "/resume/"
+  weight     = 500
+  url        = "/resume/"
+[[menu.main]]
+  name       = "restaurant-guide"
+  identifier = "restaurant-guide"
+  weight     = 600
+  url        = "/restaurant-guide/"

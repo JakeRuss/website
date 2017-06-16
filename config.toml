@@ -12,7 +12,7 @@ theme = "hugo-sustain"
   cheatsheets = "cheatsheets/:slug/"
 
 [params]
-  avatar = "18.5.jpg"
+  avatar = "jake.jpg"
   author = "Jake Russ"
   description = "economist and statistical programmer"
 

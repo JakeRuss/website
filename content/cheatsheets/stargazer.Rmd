@@ -1,5 +1,5 @@
 ---
-title: "A Stargazer Cheatsheet"
+title: "Stargazer"
 slug: "stargazer"
 date: "2014-09-03"
 excerpt: "Exploring stargazer with dplyr and nycflights13"

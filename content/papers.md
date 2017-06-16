@@ -1,4 +1,5 @@
 ---
 title: "Papers"
+layout: "special"
 ---
 

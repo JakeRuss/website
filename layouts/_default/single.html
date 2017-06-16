@@ -1,0 +1,16 @@
+{{ partial "head" . }}
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+{{ partial "header.html" . }}
+<section id="main">
+  <div class="container">
+  <h1 id="title">{{ .Title }}</h1>
+  <div>
+        <article id="content">
+           {{ .Content }}
+        </article>
+  </div>
+  </div>
+</section>
+{{ partial "footer.html" . }}
